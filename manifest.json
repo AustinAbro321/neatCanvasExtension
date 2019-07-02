@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Neat Canvas App",
+    "description": "Makes downloading convient",
+    "version": "1.0.0",
+    "offline_enabled": true,
+    "content_scripts": [
+      {
+        "matches": ["*://canvas.wayne.edu/*"],
+        "js": ["getClass.js"],
+        "persistent": false
+      }
+    ],
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+      },
+    "permissions": [
+        "downloads",
+        "storage"
+     ]
+    
+}
